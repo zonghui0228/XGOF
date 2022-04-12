@@ -96,7 +96,7 @@ Descriptive statistics of GOF construction of 33 human related cancers from TCGA
 | UCS         | 7300     | 6299              | 1001               | 21607             | 301               | 151          |
 | UVM         | 4478     | 2999              | 1479               | 72767             | 925               | 343          |
 
-All gene and GO annotations and GOF results can be downloaded from zenodo.
+All gene and GO annotations and GOF results can be downloaded from [zenodo](https://zenodo.org/record/6451547#.YlVheMhByMo).
 
 ## 3. Contacts
 
