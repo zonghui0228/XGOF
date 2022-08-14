@@ -14,7 +14,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+# lib/
 lib64/
 parts/
 sdist/
@@ -134,4 +134,6 @@ knol/NCBI_EntrezGene/*.*
 knol/GO/*.*
 case/test/PubTator/*.*
 
+lib/__pycache__/*.*
+lib/.Rhistory
 
