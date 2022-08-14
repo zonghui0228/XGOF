@@ -4,8 +4,12 @@
 # @object   : some useful functions related to PubTator.gov database
 
 
+
+import os
+import sys
 import csv
 import json
+import getopt
 from tqdm import tqdm
 from collections import defaultdict
 
@@ -68,28 +72,30 @@ def pubtator2gene1(case, pubtator_anno_path, pubmed2gene_path):
     return "done!"
 
 
-if __name__ == "__main__":
-    # ==================================================
-    # cases = ['AAV2', 'COVID19', 'EBV', 'HBV', 'HIV', 'HPV', 'HTLV1', 'MCV', 'XMRV']
-    # for case in cases:
-    #     pubtator_anno_path = '../data/PubTator/virus/{}/{}.pubtator.bioclist.anno.txt'.format(case, case)
-    #     pubmed2gene_path = '../data/BiologicalEntity/Gene2/virus/{}_pubmed2gene.csv'.format(case)
-    #     pubtator2gene1(case, pubtator_anno_path, pubmed2gene_path)
-        
-    # ==================================================
-    # cases = ['CHOL', 'COADREAD', 'ESCA', 'LIHC', 'PAAD', 'STAD']
-    # for case in cases:
-    #     pubtator_anno_path = '../data/PubTator/GIDB/{}/{}.pubtator.bioclist.anno.txt'.format(case, case)
-    #     pubmed2gene_path = '../data/BiologicalEntity/Gene2/GIDB/{}_pubmed2gene.csv'.format(case)
-    #     pubtator2gene1(case, pubtator_anno_path, pubmed2gene_path)
+def main(argv):
+    # parse parameters
+    case = ''
+    try:
+        opts, args = getopt.getopt(argv, "hc:", ["case="])
+    except getopt.GetoptError:
+        print('python pubtator2GENE.py -c <case>')
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt == '-h':
+            print('python pubtator2GENE.py -c <case>')
+            sys.exit()
+        elif opt in ("-c", "--case"):
+            case = arg
     
-    # ==================================================
-    # cases = ['ACC', 'BLCA', 'BRCA', 'CESC', 'CHOL', 'COAD', 'DLBC', 'ESCA', 'GBM', 'HNSC', 'KICH',
-    #          'KIRC', 'KIRP', 'LAML', 'LGG', 'LIHC', 'LUAD', 'LUSC', 'MESO', 'OV', 'PAAD', 'PCPG',
-    #          'PRAD', 'READ', 'SARC', 'SKCM', 'STAD', 'TGCT', 'THCA', 'THYM', 'UCEC', 'UCS', 'UVM']
-    # for case in cases:
-    #     pubtator_anno_path = '../data/PubTator/TCGA/{}/{}.pubtator.bioclist.anno.txt'.format(case, case)
-    #     pubmed2gene_path = '../data/BiologicalEntity/Gene2/TCGA/{}_pubmed2gene.csv'.format(case)
-    #     pubtator2gene1(case, pubtator_anno_path, pubmed2gene_path)
+    # extract gene annotation
+    pubtator_anno_path = f'../case/{case}/PubTator/{case}.pubtator.bioclist.anno.txt'
+    save_folder = f'../case/{case}/BiologicalEntity/'
+    if not os.path.exists(save_folder):
+        os.mkdir(save_folder)
+    pubmed2gene_path = f'../case/{case}/BiologicalEntity/{case}_pubmed2gene.csv'
+    pubtator2gene1(case, pubtator_anno_path, pubmed2gene_path)
 
-    print('done!')
+if __name__ == "__main__":
+    main(sys.argv[1:])
+
+

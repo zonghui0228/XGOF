@@ -78,11 +78,12 @@ logging.info("\t[time] totally use time: {} seconds".format(round(t4-t1, 4)))
 
 
 # step4: calculate GOFxGEX
-gg = GOFxGEX(config.GOF, config.GEX)
-gg.save_GOFxGEX(save_path = config.matrix_GOFxGEX)
-logging.info("\n--------------------\n[step4] Calculate GOF x GEX Matirx")
-logging.info("\t[GEX] tumor samples:{}, normal samples:{}".format(len(gg.Samples_tumor), len(gg.Samples_normal)))
-logging.info("\t[GOFxGEX matrix: GOxSample] {}x{}, saved at {}".format(len(gg.GOFxGEX_matrix.index), len(gg.GOFxGEX_matrix.columns), config.matrix_GOFxGEX))
-t5 = time.time()
-logging.info("\t[time] used time: {} seconds".format(round(t5-t4, 4)))
-logging.info("\t[time] totally use time: {} seconds".format(round(t5-t1, 4)))
+# gg = GOFxGEX(config.GOF, config.GEX)
+# gg.save_GOFxGEX(save_path = config.matrix_GOFxGEX)
+# logging.info("\n--------------------\n[step4] Calculate GOF x GEX Matirx")
+# logging.info("\t[GEX] tumor samples:{}, normal samples:{}".format(len(gg.Samples_tumor), len(gg.Samples_normal)))
+# logging.info("\t[GOFxGEX matrix: GOxSample] {}x{}, saved at {}".format(len(gg.GOFxGEX_matrix.index), len(gg.GOFxGEX_matrix.columns), config.matrix_GOFxGEX))
+# t5 = time.time()
+# logging.info("\t[time] used time: {} seconds".format(round(t5-t4, 4)))
+# logging.info("\t[time] totally use time: {} seconds".format(round(t5-t1, 4)))
+

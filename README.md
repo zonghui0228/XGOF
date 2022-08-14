@@ -12,6 +12,8 @@ For a case study, such as cancer, we construct gene ontology fingerprint with fo
 
 For each case, we obtained its standard expression term and synonyms from MeSH database, then used these terms to retrieved PubMed database and get the relevant PubMed identifiers (PMIDs) and PubMed Central identifiers (PMCIDs). PubTator is a web-based system providing automatic annotations of biomedical concepts such as genes in PubMed abstracts and PMC full-text articles. We progarmatically retrieved annotations from PubTator with PMIDs or PMCIDs, and extratced gene annotations and corresponding sentences. The Gene Ontology (GO) knowledgebase curated the world’s largest source of information on the functions of genes. We downloaded the ontology file which is released in May 01 2021. Here we applied a lexicon look-up method with exact string matching strategy to recognize GO terms between the gene annotation sentences and ontology dictionary. We also considered word boundary detection and longest string matching rule.
 
+In this [page](https://github.com/zonghui0228/XGOF/tree/main/lib), we introduce how to retrieve PubMed literatures, download PubTator annotation, and recognize Gene and GO.
+
 #### sentence-gene mapping
 
 ```html
@@ -49,6 +51,13 @@ The gene-gene similarity score (GGSS) was computed based on a modified inner pro
 
 To identify biologically justified subnetworks (highly dense interconnected clusters) in the GOF network,
 we used the MCODE algorithm for network clustering and Cytoscape for visualization.
+
+```Python
+# For a case named test, we run step 1-3:
+# python main.py -case <case> -pmid ../case/<case>/<case>.sentid.txt
+cd bin
+python main.py -case test -pmid ../case/test/test.sentid.txt
+```
 
 ### step 4. Other application 
 

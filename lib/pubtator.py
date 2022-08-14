@@ -13,7 +13,9 @@
 """
 
 import os
+import sys
 import json
+import getopt
 import requests
 from tqdm import tqdm
 from collections import defaultdict
@@ -198,50 +200,33 @@ def save_sentenceid(infile, outfile):
         outf.write('\n'.join(sentence_id) + '\n')
 
 
-if __name__ == '__main__':
-    # ==================================================
-    # cases = ['AAV2', 'COVID19', 'EBV', 'HBV', 'HIV', 'HPV', 'HTLV1', 'MCV', 'XMRV']
-    # for case in cases:
-    #     idList_path = f'../case/virus/{case}/{case}.pmcid.txt'
-    #     total, pmids, pmcids = get_pmid_pmcid(idList_path)
-    #     print('[case]:', case, '[total]:', len(total), '[pmid-abstract]:', len(pmids), '[pmcid-fulltetx]:', len(pmcids))
-    #     save_folder = os.path.join('../data/PubTator/virus/', case)
-    #     if not os.path.exists(save_folder):
-    #         os.mkdir(save_folder)
-    #     pmid_pubtator_bioclist = download_pubtator(case=case, idList=pmids, input_type='pmid', save_folder=save_folder)
-    #     pmcid_pubtator_bioclist = download_pubtator(case=case, idList=pmcids, input_type='pmcid', save_folder=save_folder)
-    #     split_anno_sent(case, pmid_pubtator_bioclist+pmcid_pubtator_bioclist, save_folder)
-    #     save_sentenceid(f'../data/PubTator/virus/{case}/{case}.pubtator.bioclist.sent.txt', f'../case/virus/{case}/{case}.sentid.txt')
+def main(argv):
+    # parse parameters
+    case = ''
+    try:
+        opts, args = getopt.getopt(argv, "hc:", ["case="])
+    except getopt.GetoptError:
+        print('python pubtator.py -c <case>')
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt == '-h':
+            print('python pubtator.py -c <case>')
+            sys.exit()
+        elif opt in ("-c", "--case"):
+            case = arg
+    
+    # obtain annotation
+    pmcid_file = f'../case/{case}/{case}.pmcid.txt'
+    total, pmids, pmcids = get_pmid_pmcid(pmcid_file)
+    print('[case]:', case, '[total]:', len(total), '[pmid-abstract]:', len(pmids), '[pmcid-fulltetx]:', len(pmcids))
+    save_folder = f'../case/{case}/PubTator/'
+    if not os.path.exists(save_folder):
+        os.mkdir(save_folder)
+    pmid_pubtator_bioclist = download_pubtator(case=case, idList=pmids, input_type='pmid', save_folder=save_folder)
+    pmcid_pubtator_bioclist = download_pubtator(case=case, idList=pmcids, input_type='pmcid', save_folder=save_folder)
+    split_anno_sent(case, pmid_pubtator_bioclist+pmcid_pubtator_bioclist, save_folder)
+    save_sentenceid(f'../case/{case}/PubTator/{case}.pubtator.bioclist.sent.txt', f'../case/{case}/{case}.sentid.txt')
 
-    # ==================================================
-    # cases = ['CHOL', 'COADREAD', 'ESCA', 'LIHC', 'PAAD', 'STAD']
-    # for case in cases:
-    #     idList_path = f'../case/virus/{case}/{case}.pmcid.txt'
-    #     total, pmids, pmcids = get_pmid_pmcid(idList_path)
-    #     print('[case]: ', case, '[total]: ', len(total), '[pmid-abstract]: ', len(pmids), '[pmcid-fulltetx]: ', len(pmcids))
-    #     save_folder = os.path.join('../data/PubTator/GIDB/', case)
-    #     if not os.path.exists(save_folder):
-    #         os.mkdir(save_folder)
-    #     pmid_pubtator_bioclist = download_pubtator(case=case, idList=pmids, input_type='pmid', save_folder=save_folder)
-    #     pmcid_pubtator_bioclist = download_pubtator(case=case, idList=pmcids, input_type='pmcid', save_folder=save_folder)
-    #     split_anno_sent(case, pmid_pubtator_bioclist+pmcid_pubtator_bioclist, save_folder)
-    #     save_sentenceid(f'../data/PubTator/GIDB/{case}/{case}.pubtator.bioclist.sent.txt', f'../case/GIDB/{case}/{case}.sentid.txt')
+if __name__ == "__main__":
+    main(sys.argv[1:])
 
-    # ==================================================
-    # cases = ['ACC', 'BLCA', 'BRCA', 'CESC', 'CHOL', 'COAD', 'DLBC', 'ESCA', 'GBM', 'HNSC', 'KICH',
-    #          'KIRC', 'KIRP', 'LAML', 'LGG', 'LIHC', 'LUAD', 'LUSC', 'MESO', 'OV', 'PAAD', 'PCPG',
-    #          'PRAD', 'READ', 'SARC', 'SKCM', 'STAD', 'TGCT', 'THCA', 'THYM', 'UCEC', 'UCS', 'UVM']
-    # for case in cases:
-    #     idList_path = f'../case/TCGA/{case}/{case}.pmcid.txt'
-    #     total, pmids, pmcids = get_pmid_pmcid(idList_path)
-    #     print('[case]: ', case, '[total]: ', len(total), '[pmid-abstract]: ', len(pmids), '[pmcid-fulltetx]: ',
-    #           len(pmcids))
-    #     save_folder = os.path.join('../data/PubTator/TCGA/', case)
-    #     if not os.path.exists(save_folder):
-    #         os.mkdir(save_folder)
-    #     pmid_pubtator_bioclist = download_pubtator(case=case, idList=pmids, input_type='pmid', save_folder=save_folder)
-    #     pmcid_pubtator_bioclist = download_pubtator(case=case, idList=pmcids, input_type='pmcid', save_folder=save_folder)
-    #     split_anno_sent(case, pmid_pubtator_bioclist + pmcid_pubtator_bioclist, save_folder)
-    #     save_sentenceid(f'../data/PubTator/TCGA/{case}/{case}.pubtator.bioclist.sent.txt', f'../case/TCGA/{case}/{case}.sentid.txt')
-
-    print("done!")

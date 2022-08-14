@@ -4,8 +4,11 @@
 # @object   : some useful functions related to PubTator.gov database
 
 
+import os
+import sys
 import csv
 import json
+import getopt
 import pandas as pd
 from collections import defaultdict
 from RecognizeGO import exact_string_match
@@ -71,32 +74,29 @@ def pubtator2go(case, pubtator_biocjson_path=None, pubtator_sent_path=None, pubm
 
 
 
+def main(argv):
+    # parse parameters
+    case = ''
+    try:
+        opts, args = getopt.getopt(argv, "hc:", ["case="])
+    except getopt.GetoptError:
+        print('python pubtator2GO.py -c <case>')
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt == '-h':
+            print('python pubtator2GO.py -c <case>')
+            sys.exit()
+        elif opt in ("-c", "--case"):
+            case = arg
+    
+    # recognize gene ontology
+    pubtator_sent_path = f'../case/{case}/PubTator/{case}.pubtator.bioclist.sent.txt'
+    save_folder = f'../case/{case}/BiologicalEntity/'
+    if not os.path.exists(save_folder):
+        os.mkdir(save_folder)
+    pubmed2go_path = f'../case/{case}/BiologicalEntity/{case}_pubmed2go.csv'
+    pubtator2go(case, pubtator_sent_path=pubtator_sent_path, pubmed2go_path=pubmed2go_path)
+
 if __name__ == "__main__":
-    # ==================================================
-    # cases = ['AAV2', 'COVID19', 'EBV', 'HBV', 'HIV', 'HPV', 'HTLV1', 'MCV', 'XMRV']
-    cases = ['HIV']
-    for case in cases:
-        print(case)
-        pubtator_sent_path = '../data/PubTator/virus/{}/{}.pubtator.bioclist.sent.txt'.format(case, case)
-        pubmed2go_path = '../data/BiologicalEntity/GO2/virus/{}_pubmed2go.csv'.format(case)
-        pubtator2go(case, pubtator_sent_path=pubtator_sent_path, pubmed2go_path=pubmed2go_path)
+    main(sys.argv[1:])
 
-    # ==================================================
-    # cases = ['CHOL', 'COADREAD', 'ESCA', 'LIHC', 'PAAD', 'STAD']
-    # for case in cases:
-    #     print(case)
-    #     pubtator_sent_path = '../data/PubTator/GIDB/{}/{}.pubtator.bioclist.sent.txt'.format(case, case)
-    #     pubmed2go_path = '../data/BiologicalEntity/GO2/GIDB/{}_pubmed2go.csv'.format(case)
-    #     pubtator2go(case, pubtator_sent_path=pubtator_sent_path, pubmed2go_path=pubmed2go_path)
-
-    # ==================================================
-    # cases = ['ACC', 'BLCA', 'BRCA', 'CESC', 'CHOL', 'COAD', 'DLBC', 'ESCA', 'GBM', 'HNSC', 'KICH',
-    #          'KIRC', 'KIRP', 'LAML', 'LGG', 'LIHC', 'LUAD', 'LUSC', 'MESO', 'OV', 'PAAD', 'PCPG',
-    #          'PRAD', 'READ', 'SARC', 'SKCM', 'STAD', 'TGCT', 'THCA', 'THYM', 'UCEC', 'UCS', 'UVM']
-    # for case in cases:
-    #     print(case)
-    #     pubtator_sent_path = '../data/PubTator/TCGA/{}/{}.pubtator.bioclist.sent.txt'.format(case, case)
-    #     pubmed2go_path = '../data/BiologicalEntity/GO2/TCGA/{}_pubmed2go.csv'.format(case)
-    #     pubtator2go(case, pubtator_sent_path=pubtator_sent_path, pubmed2go_path=pubmed2go_path)
-
-    print('done!')

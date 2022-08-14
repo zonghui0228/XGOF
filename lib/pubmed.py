@@ -5,45 +5,48 @@
 
 """
 功能主要包括：
-    term2pmid:          输入查询词，访问PubMed数据库，获得PMID列表。
-    parsePMCIDsFile:    解析PubMed数据库的ID映射文件，获得PMID和PMCID的映射。
-    pmid2pmcid:         输入pmid列表，获取对应的pmcid。
-    downloadMedline:    输入pmid列表，下载Medline格式数据。
+    term_to_pmid:          输入查询词，访问PubMed数据库，获得PMID列表。
+    parse_PMCIDsFile:      解析PubMed数据库的ID映射文件，获得PMID和PMCID的映射。
+    pmid_to_pmcid:         输入pmid列表，获取对应的pmcid。
+    download_medline:      输入pmid列表，下载Medline格式数据。
 """
 
 
 import os
+import sys
 import csv
 import json
 import time
+import getopt
 import requests
 import pandas as pd
 from Bio import Medline, Entrez
 Entrez.email = ""
 
 
-def term2pmid(terms: list, save_path=None) -> list:
+def term_to_pmid(term_file: str, save_path=None) -> list:
     """输入查询词，访问PubMed数据库，获得PMID列表."""
     # 构建查询语句
-    query_terms = '(' + ') OR ('.join(terms) + ')'
-    print('[query]: {}'.format(query_terms))
+    with open(term_file, 'r') as f:
+        term = f.readline().strip('\n')
+    print(f'[search term]: {term}')
     # 开始检索
-    handle0 = Entrez.esearch(db='pubmed', term=query_terms, RetMax=300000000)
+    handle0 = Entrez.esearch(db='pubmed', term=term, RetMax=300000000)
     record = Entrez.read(handle0)
     pmids, count = record['IdList'], record['Count']
+    print(len(pmids))
     # 按升序进行排序
     pmids.sort(key=int)
     # 保存结果
     if save_path:
         with open(save_path, 'w') as f:
+            f.write('PMID\n')
             f.write('\n'.join(pmids) + '\n')
-        print('[pmid]: {}, [save path]: {}'.format(len(pmids), save_path))
-    # 休眠1秒，避免持续访问导致连接中断。
-    time.sleep(1)
+    print(f'[pmid]: {len(pmids)}, [save path]: {save_path}')
     return pmids
 
 
-def parsePMCIDsFile(PMCIDS_file = "../knol/PubMed/PMC-ids.csv"):
+def parse_PMCIDsFile(pmcids_file = "../knol/PubMed/PMC-ids.csv"):
     """
     The PMC-ids.csv.gz file, available through the FTP service,
     maps an article’s standard IDs to each other and to other article metadata elements.
@@ -51,32 +54,33 @@ def parsePMCIDsFile(PMCIDS_file = "../knol/PubMed/PMC-ids.csv"):
     Journal Title, ISSN, ..., PMCID, PubMed ID (if available), ..., Release Date (Mmm DD YYYY or live)
     link: https://www.ncbi.nlm.nih.gov/pmc/pmctopmid/
     """
-    PMCIDtoPMID = dict()
-    PMIDtoPMCID = dict()
-    with open(PMCIDS_file, 'r') as inf:
+    pmcid2pmid = dict()
+    pmid2pmcid = dict()
+    print(f'loading {pmcids_file}, please waiting...')
+    with open(pmcids_file, 'r') as inf:
         rows = list(csv.reader(inf))
         for row in rows[1:]:
-            PMCIDtoPMID[row[8]] = row[9]
+            pmcid2pmid[row[8]] = row[9]
             if row[9]:
-                PMIDtoPMCID[row[9]] = row[8]
-    print('{} pmcid mapped to {} pmid in file PMC-ids.csv.gz'.format(len(PMCIDtoPMID), len(PMIDtoPMCID)))
-    return PMCIDtoPMID, PMIDtoPMCID
+                pmid2pmcid[row[9]] = row[8]
+    print(f'{len(pmcid2pmid)} pmcid mapped to {len(pmid2pmcid)} pmid in file PMC-ids.csv.gz')
+    return pmcid2pmid, pmid2pmcid
 
 
-def pmid2pmcid(pmids: list, PMIDtoPMCID: dict, save_path=None):
+def pmid_to_pmcid(pmids: list, pmid2pmcid: dict, save_path=None):
     """输入PMID，获得相应的PMCID"""
-    pmcids = [PMIDtoPMCID.get(p, '') for p in pmids]
+    pmcids = [pmid2pmcid.get(p, '') for p in pmids]
     pmcids_count = len(pmcids) - pmcids.count('')
     if save_path:
         with open(save_path, 'w') as f:
-            f.write('{}\t{}\n'.format('PMID', 'PMCID'))
+            f.write('PMID\tPMCID\n')
             for pmid, pmcid in zip(pmids, pmcids):
                 f.write('{}\t{}\n'.format(pmid, pmcid))
-        print('[pmid]: {}, [pmcid]: {}, [save path]: {}'.format(len(pmids), pmcids_count, save_path))
+        print(f'[pmcid]: {pmcids_count}, [save path]: {save_path}')
     return pmcids
 
 
-def downloadMedline(case, pmids:list=None, save_path=None):
+def download_medline(case, pmids:list=None, save_path=None):
     t1 = time.time()
     # 如果存储路径不存在，则创建
     if not os.path.exists(save_path):
@@ -103,50 +107,29 @@ def downloadMedline(case, pmids:list=None, save_path=None):
     return "downloaded!"
 
 
+def main(argv):
+    # parse parameters
+    case = ''
+    try:
+        opts, args = getopt.getopt(argv, "hc:", ["case="])
+    except getopt.GetoptError:
+        print('python pubmed.py -c <case>')
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt == '-h':
+            print('python pubmed.py -c <case>')
+            sys.exit()
+        elif opt in ("-c", "--case"):
+            case = arg
+    # obtain pmid, pmcid
+    term_file = os.path.join(f'../case/{case}', f'{case}.term.txt')
+    pmid_file = os.path.join(f'../case/{case}', f'{case}.pmid.txt')
+    pmcid_file = os.path.join(f'../case/{case}', f'{case}.pmcid.txt')
+    pmcid2pmid, pmid2pmcid = parse_PMCIDsFile()
+    pmids = term_to_pmid(term_file, save_path=pmid_file)
+    pmcids = pmid_to_pmcid(pmids, pmid2pmcid, save_path=pmcid_file)
+
+
 if __name__ == "__main__":
-    #==================================================
-    # PMCIDtoPMID, PMIDtoPMCID = parsePMCIDsFile()
-    # 输入9种virus的检索词，获取并保存PMID，获取PMID和PMCID的映射
-    # df = pd.read_json('../knol/virus/virus_synonym.json')
-    # case_terms = df.set_index('case').to_dict()['synonym']
-    # for case, terms in case_terms.items():
-    #     print('[case]: ', case)
-    #     case_folder = '../case/virus/{}'.format(case)
-    #     if not os.path.exists(case_folder): os.mkdir(case_folder)
-    #     pmids = term2pmid(terms, save_path=os.path.join(case_folder, '{}.pmid.txt'.format(case)))
-    #     pmcids = pmid2pmcid(pmids, PMIDtoPMCID, save_path=os.path.join(case_folder, '{}.pmcid.txt'.format(case)))
+    main(sys.argv[1:])
 
-    # 输入33种TCGA的检索词，获取并保存PMID。
-    # df = pd.read_json('../knol/TCGA/TCGA_synonym.json')
-    # case_terms = df.set_index('case').to_dict()['synonym']
-    # for case, terms in case_terms.items():
-    #     print('[case]: ', case)
-    #     case_folder = "../case/TCGA/{}".format(case)
-    #     if not os.path.exists(case_folder): os.mkdir(case_folder)
-    #     pmids = term2pmid(terms=terms, save_path=os.path.join(case_folder, "{}.pmid.txt".format(case)))
-    #     pmcids = pmid2pmcid(pmids, PMIDtoPMCID, save_path=os.path.join(case_folder, '{}.pmcid.txt'.format(case)))
-
-    # 输入6个GIDB的检索词，获取并保存PMID。
-    # df = pd.read_json('../knol/GIDB/GIDB_synonym.json')
-    # case_terms = df.set_index('case').to_dict()['synonym']
-    # for case, terms in case_terms.items():
-    #     print('[case]: ', case)
-    #     case_folder = "../case/GIDB/{}".format(case)
-    #     if not os.path.exists(case_folder): os.mkdir(case_folder)
-    #     pmids = term2pmid(terms, save_path=os.path.join(case_folder, "{}.pmid.txt".format(case)))
-    #     pmcids = pmid2pmcid(pmids, PMIDtoPMCID, save_path=os.path.join(case_folder, '{}.pmcid.txt'.format(case)))
-
-
-    # ==================================================
-    # 输入PMID，从PubMed下载Medline格式数据。
-    # cases = ['AAV2', 'COVID19', 'EBV', 'HBV', 'HIV', 'HPV', 'HTLV1', 'MCV', 'XMRV']
-    # cases = ['EBV']
-    # for case in cases:
-    #     pmid_file = '../case/virus/{}/{}.pmid.txt'.format(case, case)
-    #     with open(pmid_file, 'r') as f:
-    #         pmids = [line.strip() for line in f]
-    #     save_path = '../data/PubMed/{}'.format(case)
-    #     downloadMedline(case=case, pmids=pmids, save_path=save_path)
-
-    # ==================================================
-    print('done!')
