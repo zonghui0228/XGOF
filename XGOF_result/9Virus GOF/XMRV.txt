@@ -1,0 +1,21 @@
+Term	Name	Pvalue	Genes	level	namespace
+GO:0007165	signal transduction	0.0028431790244054004	3	2	biological_process
+GO:0007049	cell cycle	0.032780987042857875	3	2	biological_process
+GO:0006897	endocytosis	5.790035831456429e-08	1	3	biological_process
+GO:0061025	membrane fusion	2.175418169740745e-07	1	5	biological_process
+GO:0035148	tube formation	3.239409358490385e-07	1	3	biological_process
+GO:0051168	nuclear export	0.016649725499944843	5	6	biological_process
+GO:0009606	tropism	1.1412897701341644e-05	1	3	biological_process
+GO:0006412	translation	0.002823659367022378	2	5	biological_process
+GO:0016310	phosphorylation	0.0002480872920828805	2	5	biological_process
+GO:0032259	methylation	0.000169664065151	1	2	biological_process
+GO:0030154	cell differentiation	0.0036628709958159	3	3	biological_process
+GO:0001525	angiogenesis	0.0005057527860944	1	3	biological_process
+GO:0045087	innate immune response	0.0013196093956192	1	4	biological_process
+GO:0032606	type I interferon production	0.0047505938242272	1	3	biological_process
+GO:0046903	secretion	0.017746928702482335	6	4	biological_process
+GO:0006954	inflammatory response	0.0095011876484545	1	4	biological_process
+GO:0006935	chemotaxis	0.0095011876484545	1	3	biological_process
+GO:0016049	cell growth	0.0142178486596511	1	2	biological_process
+GO:0016311	dephosphorylation	0.0213776722090226	1	5	biological_process
+GO:0001775	cell activation	0.0395882818685603	1	2	biological_process

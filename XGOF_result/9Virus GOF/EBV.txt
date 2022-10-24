@@ -1,0 +1,478 @@
+Term	Name	Pvalue	Genes	level	namespace
+GO:0007613	memory	0.003638291371992923	95	3	biological_process
+GO:0042113	B cell activation	0.0030449917059416805	24	4	biological_process
+GO:0046903	secretion	0.003791504402221025	106	4	biological_process
+GO:0006914	autophagy	0.0035685848277603317	73	3	biological_process
+GO:0012501	programmed cell death	0.0015508559190590544	18	3	biological_process
+GO:0001525	angiogenesis	0.003001819621687441	67	3	biological_process
+GO:1905517	macrophage migration	0.008000170570820343	5	4	biological_process
+GO:0016310	phosphorylation	0.0027112142306872557	219	5	biological_process
+GO:0051168	nuclear export	0.002633595451540787	29	6	biological_process
+GO:0032259	methylation	0.0036381219354353713	141	2	biological_process
+GO:0008037	cell recognition	0.0025462463765169455	17	2	biological_process
+GO:0007049	cell cycle	0.006756505531016609	190	2	biological_process
+GO:0061912	selective autophagy	0.004337757004290519	10	5	biological_process
+GO:0006298	mismatch repair	0.004041785757722634	19	6	biological_process
+GO:0051923	sulfation	2.8296400590494735e-07	5	4	biological_process
+GO:0000910	cytokinesis	0.005364144606501838	9	3	biological_process
+GO:0006412	translation	0.0042885254129953745	65	5	biological_process
+GO:0000266	mitochondrial fission	0.005026018908953817	9	6	biological_process
+GO:0042110	T cell activation	0.0064794030278892585	47	4	biological_process
+GO:0002317	plasma cell differentiation	0.003387025450414017	16	7	biological_process
+GO:0006281	DNA repair	0.004102890016067592	88	5	biological_process
+GO:0030217	T cell differentiation	0.0032984827522691772	16	5	biological_process
+GO:0070085	glycosylation	0.003916189721878171	23	2	biological_process
+GO:0048870	cell motility	0.009077658309478378	40	2	biological_process
+GO:0006338	chromatin remodeling	0.006418424348126027	33	5	biological_process
+GO:0032609	interferon-gamma production	0.0152089367619703	2	3	biological_process
+GO:0006306	DNA methylation	0.0011031380023495514	42	4	biological_process
+GO:0006955	immune response	0.006310616934061679	58	2	biological_process
+GO:0009451	RNA modification	2.805820453382074e-07	2	5	biological_process
+GO:0007155	cell adhesion	0.007968051130637276	67	2	biological_process
+GO:0048468	cell development	0.002537403769012404	28	3	biological_process
+GO:0033622	integrin activation	0.002616678443642512	6	6	biological_process
+GO:0050817	coagulation	0.00881503111238487	23	2	biological_process
+GO:0046649	lymphocyte activation	0.007272915379558408	25	3	biological_process
+GO:0042098	T cell proliferation	0.005307225815074747	28	5	biological_process
+GO:0010467	gene expression	0.005127856390090628	122	4	biological_process
+GO:0016573	histone acetylation	0.0017444478495374494	10	7	biological_process
+GO:0032613	interleukin-10 production	1.9646433102113875e-48	1	3	biological_process
+GO:0097352	autophagosome maturation	0.0018525560651488227	6	6	biological_process
+GO:0044026	DNA hypermethylation	0.0010308680755005623	11	7	biological_process
+GO:0006276	plasmid maintenance	4.942614991907344e-11	3	2	biological_process
+GO:0000746	conjugation	4.870772872601053e-11	11	3	biological_process
+GO:0051320	S phase	0.00048079131963216443	31	3	biological_process
+GO:0001816	cytokine production	0.00822390803951445	44	2	biological_process
+GO:0008219	cell death	0.004433024266255261	61	2	biological_process
+GO:0019835	cytolysis	0.0005245941783541771	10	2	biological_process
+GO:0043542	endothelial cell migration	0.00152463147255555	2	6	biological_process
+GO:0016477	cell migration	0.004175481776994649	58	3	biological_process
+GO:0006810	transport	0.0009280593370800231	15	3	biological_process
+GO:0030073	insulin secretion	0.00034625877906673333	3	5	biological_process
+GO:0046651	lymphocyte proliferation	2.020368169545573e-08	2	4	biological_process
+GO:0035825	homologous recombination	0.002972775858941085	12	6	biological_process
+GO:0046323	glucose import	0.002164851603573902	6	7	biological_process
+GO:0032637	interleukin-8 production	2.7518402182780827e-22	2	3	biological_process
+GO:0001171	reverse transcription	1.6038440444595195e-05	9	7	biological_process
+GO:0015833	peptide transport	0.0010601712136797102	5	5	biological_process
+GO:0032196	transposition	0.0017601470888590001	3	2	biological_process
+GO:0035455	response to interferon-alpha	1.0806945572429285e-33	1	5	biological_process
+GO:0001946	lymphangiogenesis	4.0368191147533454e-11	3	3	biological_process
+GO:1990182	exosomal secretion	0.0002412072139238	2	4	biological_process
+GO:0098609	cell-cell adhesion	0.008710028708155312	7	3	biological_process
+GO:0010631	epithelial cell migration	1.333187964518086e-10	2	5	biological_process
+GO:0045087	innate immune response	0.010867295786100541	30	4	biological_process
+GO:0007165	signal transduction	0.0112629454211477	60	2	biological_process
+GO:0080111	DNA demethylation	3.830124377557047e-06	8	3	biological_process
+GO:0016055	Wnt signaling pathway	0.0010850167431086357	4	5	biological_process
+GO:0001775	cell activation	0.007394863869322752	92	2	biological_process
+GO:0006325	chromatin organization	0.0002729709626552	4	4	biological_process
+GO:0030224	monocyte differentiation	4.222326395603133e-09	2	6	biological_process
+GO:0035329	hippo signaling	0.00179112818550645	6	4	biological_process
+GO:0090399	replicative senescence	0.0040256893742288665	5	4	biological_process
+GO:0032635	interleukin-6 production	3.6025647639138397e-26	1	3	biological_process
+GO:0007258	JUN phosphorylation	4.943588486892276e-05	2	7	biological_process
+GO:0140042	lipid droplet formation	1.9740343342024525e-07	2	6	biological_process
+GO:0002524	hypersensitivity	0.0010862089949349645	4	5	biological_process
+GO:0097087	interleukin-17A production	3.124114903432814e-25	1	4	biological_process
+GO:0006260	DNA replication	0.006126431382963036	84	5	biological_process
+GO:0006334	nucleosome assembly	0.0025729970253634236	6	6	biological_process
+GO:0030316	osteoclast differentiation	0.0011262029145448884	4	6	biological_process
+GO:0030261	chromosome condensation	0.0005679367534537	2	8	biological_process
+GO:0019395	fatty acid oxidation	4.4425732636907165e-08	3	5	biological_process
+GO:0030855	epithelial cell differentiation	0.004035037832970631	13	4	biological_process
+GO:0016236	macroautophagy	0.009452203298136183	14	4	biological_process
+GO:0000279	M phase	0.006901867566639455	5	3	biological_process
+GO:0030225	macrophage differentiation	0.00119418081923465	2	6	biological_process
+GO:0031497	chromatin assembly	0.005442638828510042	5	5	biological_process
+GO:0000423	mitophagy	0.0017047732627476395	9	5	biological_process
+GO:0019080	viral gene expression	0.0007904411171357923	15	2	biological_process
+GO:0016311	dephosphorylation	0.011130781657607891	22	5	biological_process
+GO:0072537	fibroblast activation	8.533018953273931e-24	1	3	biological_process
+GO:0019042	viral latency	0.0019471851490977324	14	2	biological_process
+GO:0030431	sleep	0.001719547430381714	7	2	biological_process
+GO:0003094	glomerular filtration	4.965879582155945e-11	4	5	biological_process
+GO:0023035	CD40 signaling pathway	0.00678070047281475	2	4	biological_process
+GO:0031295	T cell costimulation	0.0021972752569850464	4	3	biological_process
+GO:0002790	peptide secretion	3.7132199717938716e-23	1	5	biological_process
+GO:0007219	Notch signaling pathway	0.0021149335654059077	12	4	biological_process
+GO:0051325	interphase	1.6561497867672826e-08	4	3	biological_process
+GO:0061515	myeloid cell development	8.112747608718184e-23	1	4	biological_process
+GO:0006468	protein phosphorylation	0.008349674949944886	12	6	biological_process
+GO:0048469	cell maturation	0.004643219964178443	6	3	biological_process
+GO:0035148	tube formation	4.968803363087217e-16	2	3	biological_process
+GO:0009606	tropism	0.012768224196832954	6	3	biological_process
+GO:0051250	negative regulation of lymphocyte activation	4.901535632682908e-22	1	6	biological_process
+GO:0010573	vascular endothelial growth factor production	1.2091153697916804e-14	2	3	biological_process
+GO:0006935	chemotaxis	0.00679690576480101	21	3	biological_process
+GO:0009293	transduction	0.0059828541717701095	17	4	biological_process
+GO:0016049	cell growth	0.0049760909474577735	78	2	biological_process
+GO:0000963	mitochondrial RNA processing	3.463403370778689e-05	2	6	biological_process
+GO:0039529	RIG-I signaling pathway	2.0894295227837262e-20	1	6	biological_process
+GO:0030154	cell differentiation	0.006163605956970248	37	3	biological_process
+GO:0032623	interleukin-2 production	2.699327689729519e-19	1	3	biological_process
+GO:0007612	learning	4.097676079149336e-19	1	3	biological_process
+GO:0001836	release of cytochrome c from mitochondria	0.0013367106394973354	4	7	biological_process
+GO:0090398	cellular senescence	0.006238034017739817	7	4	biological_process
+GO:0097354	prenylation	0.00036355660703630025	2	3	biological_process
+GO:0050900	leukocyte migration	0.017624564562710176	8	2	biological_process
+GO:0020033	antigenic variation	2.9116664195965404e-18	1	7	biological_process
+GO:0051318	G1 phase	0.0028765289144190636	13	3	biological_process
+GO:0110154	RNA decapping	9.231899536255322e-13	2	6	biological_process
+GO:0050808	synapse organization	0.0008463690438023693	3	5	biological_process
+GO:0006956	complement activation	0.00615126679079301	19	3	biological_process
+GO:0007059	chromosome segregation	0.005950210643261357	20	2	biological_process
+GO:0016458	gene silencing	0.0081299330495967	17	2	biological_process
+GO:0016571	histone methylation	0.0074836381087202905	6	5	biological_process
+GO:0006508	proteolysis	0.005359008278052597	24	4	biological_process
+GO:0080009	mRNA methylation	3.1800722566370405e-17	1	5	biological_process
+GO:0016567	protein ubiquitination	0.0034947911488127955	16	8	biological_process
+GO:0001788	antibody-dependent cellular cytotoxicity	2.1214842298033235e-14	2	4	biological_process
+GO:0070269	pyroptosis	0.004676343054644494	6	4	biological_process
+GO:0035456	response to interferon-beta	7.340198096569715e-17	1	5	biological_process
+GO:0070988	demethylation	0.004101526694267231	18	2	biological_process
+GO:0051323	metaphase	4.4057765982868224e-12	2	3	biological_process
+GO:0051726	regulation of cell cycle	0.005612165414010495	35	4	biological_process
+GO:0032606	type I interferon production	0.000973027618557866	10	3	biological_process
+GO:0045786	negative regulation of cell cycle	0.0013727427148603547	28	5	biological_process
+GO:0008380	RNA splicing	0.0059198519356234176	20	7	biological_process
+GO:0033344	cholesterol efflux	0.00045011770291295174	2	8	biological_process
+GO:0030101	natural killer cell activation	0.011317286205615196	3	4	biological_process
+GO:1904636	response to ionomycin	2.0105066019620235e-15	1	5	biological_process
+GO:0006909	phagocytosis	0.0033034113601714417	19	3	biological_process
+GO:0007623	circadian rhythm	0.0007223137484176086	3	2	biological_process
+GO:0030222	eosinophil differentiation	3.3257412352363937e-15	1	4	biological_process
+GO:0140253	cell-cell fusion	1.4528785106563512e-11	2	2	biological_process
+GO:0006099	tricarboxylic acid cycle	8.727789558765557e-15	1	3	biological_process
+GO:0006270	DNA replication initiation	0.003847047374588245	7	5	biological_process
+GO:0016574	histone ubiquitination	0.0012303443545438138	3	7	biological_process
+GO:0045730	respiratory burst	0.001365041498273839	6	2	biological_process
+GO:0007586	digestion	0.0039058608652685297	15	2	biological_process
+GO:0030183	B cell differentiation	0.011355542770374299	23	5	biological_process
+GO:0043276	anoikis	0.009629659827177839	9	5	biological_process
+GO:0072718	response to cisplatin	0.016818701180740345	2	3	biological_process
+GO:0045453	bone resorption	0.0010545593531939316	5	6	biological_process
+GO:0006364	rRNA processing	0.0006597431556709059	3	8	biological_process
+GO:0061025	membrane fusion	0.008387224723811199	6	5	biological_process
+GO:0051292	nuclear pore complex assembly	1.846467845867776e-13	1	6	biological_process
+GO:0042060	wound healing	0.0057471121905376225	13	4	biological_process
+GO:0019083	viral transcription	0.00027238132066763766	2	2	biological_process
+GO:0061470	T follicular helper cell differentiation	4.194534632441696e-13	1	10	biological_process
+GO:0097503	sialylation	4.274141724563993e-13	1	5	biological_process
+GO:0016197	endosomal transport	1.2924827253769505e-12	1	3	biological_process
+GO:0140588	chromatin looping	1.6803329332738012e-12	1	5	biological_process
+GO:0042116	macrophage activation	0.007641846579862683	6	4	biological_process
+GO:0034154	toll-like receptor 7 signaling pathway	2.371904843458717e-12	1	5	biological_process
+GO:0042100	B cell proliferation	0.007597128077345844	17	5	biological_process
+GO:0010941	regulation of cell death	0.004844213719333431	2	4	biological_process
+GO:0008053	mitochondrial fusion	5.932351049190487e-05	8	6	biological_process
+GO:0006897	endocytosis	0.009777193862380329	38	3	biological_process
+GO:0042730	fibrinolysis	0.0024868342778060614	4	6	biological_process
+GO:0001837	epithelial to mesenchymal transition	0.009812866648105968	9	5	biological_process
+GO:0001906	cell killing	0.009701158096706098	23	2	biological_process
+GO:0006954	inflammatory response	0.006448472815399287	48	4	biological_process
+GO:0097323	B cell adhesion	2.360745739975708e-11	1	5	biological_process
+GO:0045056	transcytosis	3.046038853289909e-11	1	3	biological_process
+GO:0051298	centrosome duplication	0.009235928249501806	3	3	biological_process
+GO:0006119	oxidative phosphorylation	1.9676436069854924e-06	2	3	biological_process
+GO:0009615	response to virus	0.006910670382302493	15	3	biological_process
+GO:0001558	regulation of cell growth	1.8398139262295684e-05	3	4	biological_process
+GO:0006457	protein folding	0.0018940719501818251	24	2	biological_process
+GO:0006284	base-excision repair	0.003225698779981457	5	6	biological_process
+GO:0017038	protein import	1.8662439674951518e-10	1	5	biological_process
+GO:0019882	antigen processing and presentation	0.014452260826608103	18	2	biological_process
+GO:0043627	response to estrogen	1.8849359259900268e-10	1	4	biological_process
+GO:0098743	cell aggregation	2.397115585282765e-10	1	2	biological_process
+GO:0006979	response to oxidative stress	0.0034488478225864526	2	3	biological_process
+GO:0034341	response to interferon-gamma	3.4077381124509047e-10	1	5	biological_process
+GO:0006915	apoptotic process	0.02103010406248457	9	4	biological_process
+GO:0001782	B cell homeostasis	3.797903047039422e-10	1	4	biological_process
+GO:0006310	DNA recombination	0.011745190669698542	9	5	biological_process
+GO:0070383	DNA cytosine deamination	0.0028921479442554493	2	7	biological_process
+GO:0048102	autophagic cell death	5.801572701260456e-07	3	4	biological_process
+GO:0046785	microtubule polymerization	0.004395967709152291	2	5	biological_process
+GO:0016570	histone modification	1.6106312591058863e-07	2	6	biological_process
+GO:0051319	G2 phase	1.3359884313457696e-09	1	3	biological_process
+GO:0042117	monocyte activation	0.011202850276282312	3	4	biological_process
+GO:0002064	epithelial cell development	1.577033565883557e-09	1	4	biological_process
+GO:0070989	oxidative demethylation	0.0001077467729135595	2	3	biological_process
+GO:0032868	response to insulin	0.006444951392986908	4	5	biological_process
+GO:0043029	T cell homeostasis	0.00034340193187664927	3	4	biological_process
+GO:0045006	DNA deamination	0.004856967017629646	3	6	biological_process
+GO:0006302	double-strand break repair	0.006165088748165098	4	6	biological_process
+GO:0006396	RNA processing	0.006603781480602584	16	6	biological_process
+GO:0006887	exocytosis	0.00874661916493443	21	3	biological_process
+GO:0010212	response to ionizing radiation	0.002974212334732399	2	4	biological_process
+GO:0009411	response to UV	0.01421651278798796	2	5	biological_process
+GO:0097009	energy homeostasis	0.0029493916056670664	2	3	biological_process
+GO:0016925	protein sumoylation	0.006800601343272562	7	8	biological_process
+GO:0045930	negative regulation of mitotic cell cycle	0.000916124269903911	9	6	biological_process
+GO:0055085	transmembrane transport	0.0021932290268939112	8	2	biological_process
+GO:0042692	muscle cell differentiation	1.1995301392415706e-08	1	4	biological_process
+GO:0007568	aging	0.00782498677199983	12	2	biological_process
+GO:0002118	aggressive behavior	1.346677634110433e-08	1	2	biological_process
+GO:0070527	platelet aggregation	0.00017315765015624198	3	5	biological_process
+GO:0008360	regulation of cell shape	2.020999152066027e-08	1	3	biological_process
+GO:0006390	mitochondrial transcription	2.2390195235742732e-08	1	6	biological_process
+GO:1901652	response to peptide	0.004096292534041567	3	4	biological_process
+GO:0042254	ribosome biogenesis	0.001747935401761335	5	5	biological_process
+GO:0070933	histone H4 deacetylation	3.1987470379775254e-08	1	8	biological_process
+GO:0042148	strand invasion	4.2027097893115706e-08	1	5	biological_process
+GO:0000723	telomere maintenance	0.00032915696792985925	4	5	biological_process
+GO:0051301	cell division	0.009721781400138298	33	2	biological_process
+GO:0060361	flight	0.004172868355053168	2	2	biological_process
+GO:0042495	detection of triacyl bacterial lipopeptide	2.1208266222109043e-06	2	7	biological_process
+GO:0071727	cellular response to triacyl bacterial lipopeptide	2.1208266222109043e-06	2	7	biological_process
+GO:0030098	lymphocyte differentiation	0.012370883029445811	6	4	biological_process
+GO:0061909	autophagosome-lysosome fusion	1.0074502217258309e-07	1	7	biological_process
+GO:0008228	opsonization	1.439125984609574e-07	1	3	biological_process
+GO:0061024	membrane organization	8.51454538591864e-05	2	4	biological_process
+GO:0046907	intracellular transport	0.004776373485743103	5	3	biological_process
+GO:0060348	bone development	1.9188346370653618e-07	1	4	biological_process
+GO:0001776	leukocyte homeostasis	4.521395923507134e-06	2	2	biological_process
+GO:0007062	sister chromatid cohesion	0.0032690624276437716	7	3	biological_process
+GO:0014047	glutamate secretion	3.825676510828736e-07	1	4	biological_process
+GO:0007254	JNK cascade	0.01664308902951297	3	6	biological_process
+GO:0097345	mitochondrial outer membrane permeabilization	0.003766833136473119	8	7	biological_process
+GO:1990266	neutrophil migration	0.0007260253422570953	7	5	biological_process
+GO:0042632	cholesterol homeostasis	0.0019731191249907653	3	7	biological_process
+GO:0002115	store-operated calcium entry	0.00023349200087534889	3	8	biological_process
+GO:0007595	lactation	0.0004529349478463712	2	5	biological_process
+GO:0000725	recombinational repair	0.0066563459463463885	7	6	biological_process
+GO:0035265	organ growth	1.0277574233021796e-06	1	2	biological_process
+GO:0036336	dendritic cell migration	4.2752174509715604e-05	4	4	biological_process
+GO:0007019	microtubule depolymerization	1.5719052343250551e-06	1	5	biological_process
+GO:0046849	bone remodeling	0.0015471948581831693	2	3	biological_process
+GO:0006959	humoral immune response	0.0037763042907699553	16	3	biological_process
+GO:0032481	positive regulation of type I interferon production	3.5506891808309926e-06	2	6	biological_process
+GO:0000165	MAPK cascade	0.00713438885413246	2	4	biological_process
+GO:0016584	nucleosome positioning	5.517211399888158e-06	1	6	biological_process
+GO:0051169	nuclear transport	0.007513204047628523	14	4	biological_process
+GO:0051225	spindle assembly	0.0006609610940825438	3	4	biological_process
+GO:0060333	interferon-gamma-mediated signaling pathway	7.836535442167515e-06	1	5	biological_process
+GO:0016575	histone deacetylation	0.001167561113254097	2	7	biological_process
+GO:0019725	cellular homeostasis	1.002467508146544e-05	1	2	biological_process
+GO:0051607	defense response to virus	0.002019011959020478	5	4	biological_process
+GO:0031099	regeneration	0.008375303914326584	9	3	biological_process
+GO:0030299	intestinal cholesterol absorption	1.1544677901608647e-05	1	6	biological_process
+GO:0030900	forebrain development	1.1544677901608647e-05	1	3	biological_process
+GO:0010564	regulation of cell cycle process	0.00015567356779322484	9	5	biological_process
+GO:0097502	mannosylation	1.1544677901608647e-05	1	3	biological_process
+GO:0002682	regulation of immune system process	0.0004752209230770484	10	3	biological_process
+GO:0060390	regulation of SMAD protein signal transduction	0.003792787461860463	4	5	biological_process
+GO:0007346	regulation of mitotic cell cycle	0.00019520401091917107	7	5	biological_process
+GO:0045066	regulatory T cell differentiation	0.015064449974778777	2	6	biological_process
+GO:0007596	blood coagulation	1.6883002778692028e-05	1	3	biological_process
+GO:0008104	protein localization	1.977511246568788e-05	1	3	biological_process
+GO:0001894	tissue homeostasis	2.0490424680448e-05	1	5	biological_process
+GO:0036446	myofibroblast differentiation	0.006827968303710493	2	4	biological_process
+GO:0007616	long-term memory	2.2920532846878367e-05	1	4	biological_process
+GO:2000352	negative regulation of endothelial cell apoptotic process	2.3089355803217346e-05	1	9	biological_process
+GO:0023061	signal release	2.3089355803217346e-05	1	4	biological_process
+GO:0006606	protein import into nucleus	2.3089355803217346e-05	1	5	biological_process
+GO:0007431	salivary gland development	2.3089355803217346e-05	1	5	biological_process
+GO:0030282	bone mineralization	2.3089355803217346e-05	1	3	biological_process
+GO:0002040	sprouting angiogenesis	2.3089355804187263e-05	1	4	biological_process
+GO:0006629	lipid metabolic process	4.685802941480118e-05	3	3	biological_process
+GO:0031532	actin cytoskeleton reorganization	3.1775759253423045e-05	1	4	biological_process
+GO:0042593	glucose homeostasis	0.0034995952799052863	3	6	biological_process
+GO:0055088	lipid homeostasis	0.00035690933676136	5	5	biological_process
+GO:0030155	regulation of cell adhesion	0.0036792121045233026	13	4	biological_process
+GO:0015918	sterol transport	3.463403370482601e-05	1	6	biological_process
+GO:0006695	cholesterol biosynthetic process	3.46340337062809e-05	1	6	biological_process
+GO:0030301	cholesterol transport	3.46340337062809e-05	1	7	biological_process
+GO:0014065	phosphatidylinositol 3-kinase signaling	0.0007455596665397708	2	6	biological_process
+GO:0007566	embryo implantation	0.001230204613685452	2	2	biological_process
+GO:0043248	proteasome assembly	7.050429745825344e-05	4	7	biological_process
+GO:0001510	RNA methylation	0.00023526201585022678	3	4	biological_process
+GO:0048278	vesicle docking	0.0007675404179600524	2	4	biological_process
+GO:0060326	cell chemotaxis	0.0014189591315678012	4	4	biological_process
+GO:0008356	asymmetric cell division	4.617871160643444e-05	1	3	biological_process
+GO:0001764	neuron migration	4.617871160643444e-05	1	4	biological_process
+GO:0036503	ERAD pathway	4.617871160643444e-05	1	5	biological_process
+GO:0022900	electron transport chain	0.002569154080121907	2	4	biological_process
+GO:0032543	mitochondrial translation	0.00011544322488432667	3	6	biological_process
+GO:0022617	extracellular matrix disassembly	5.77233895080434e-05	1	5	biological_process
+GO:0000281	mitotic cytokinesis	0.0002623621155381217	2	4	biological_process
+GO:0010608	posttranscriptional regulation of gene expression	6.349572845884763e-05	2	6	biological_process
+GO:0000226	microtubule cytoskeleton organization	0.00015550539772429952	4	3	biological_process
+GO:0010737	protein kinase A signaling	6.734395442061002e-05	1	4	biological_process
+GO:0006477	protein sulfation	6.926806740965173e-05	1	5	biological_process
+GO:0006259	DNA metabolic process	0.0005474131040083879	4	4	biological_process
+GO:0006974	cellular response to DNA damage stimulus	0.0005474131040083879	4	4	biological_process
+GO:0006406	mRNA export from nucleus	6.926806740965186e-05	1	6	biological_process
+GO:0009566	fertilization	0.00010390010190783688	2	2	biological_process
+GO:0060242	contact inhibition	0.0009749740929744878	2	5	biological_process
+GO:0032465	regulation of cytokinesis	7.792657583585835e-05	1	5	biological_process
+GO:0010506	regulation of autophagy	0.016255874441502213	5	6	biological_process
+GO:0006479	protein methylation	8.08127453112607e-05	1	4	biological_process
+GO:0035855	megakaryocyte development	8.08127453112607e-05	1	5	biological_process
+GO:0031623	receptor internalization	8.380745986488104e-05	1	5	biological_process
+GO:0010886	positive regulation of cholesterol storage	8.979193923473412e-05	1	6	biological_process
+GO:0009404	toxin metabolic process	9.15877780194288e-05	1	3	biological_process
+GO:0006865	amino acid transport	9.235582385044412e-05	1	5	biological_process
+GO:0000278	mitotic cell cycle	0.0008099132782666048	5	3	biological_process
+GO:0002520	immune system development	0.0028849213279892034	7	2	biological_process
+GO:0022406	membrane docking	9.235635696395626e-05	1	2	biological_process
+GO:0006517	protein deglycosylation	9.235742321286888e-05	1	5	biological_process
+GO:0060056	mammary gland involution	9.235742321286906e-05	1	3	biological_process
+GO:0043966	histone H3 acetylation	9.235742321375696e-05	1	8	biological_process
+GO:0006821	chloride transport	9.946184038309008e-05	1	7	biological_process
+GO:0007041	lysosomal transport	0.0015119535582196666	3	3	biological_process
+GO:0010216	maintenance of DNA methylation	0.0011100549789696999	2	5	biological_process
+GO:0015858	nucleoside transport	0.000115446779016	1	6	biological_process
+GO:0034612	response to tumor necrosis factor	0.0001236451232656	1	5	biological_process
+GO:0032918	spermidine acetylation	0.0001269914569176	1	8	biological_process
+GO:0007283	spermatogenesis	0.0007192372021444	3	3	biological_process
+GO:0007588	excretion	0.0031779042975352	2	3	biological_process
+GO:0018101	protein citrullination	0.0001319391760183	1	8	biological_process
+GO:0050863	regulation of T cell activation	0.0040730132715175	2	6	biological_process
+GO:0072676	lymphocyte migration	0.01691981539439985	2	4	biological_process
+GO:0045010	actin nucleation	0.00143331855061	4	6	biological_process
+GO:0006811	ion transport	0.0010991421365158	2	4	biological_process
+GO:0048538	thymus development	0.014813049474309151	2	5	biological_process
+GO:0007369	gastrulation	0.0001616198928529	1	4	biological_process
+GO:0042119	neutrophil activation	0.0001764914260839	1	5	biological_process
+GO:0051249	regulation of lymphocyte activation	0.0001847073826745	1	5	biological_process
+GO:0022402	cell cycle process	0.005895629690964719	16	2	biological_process
+GO:0048478	replication fork protection	0.0004244654787212	2	6	biological_process
+GO:0048041	focal adhesion assembly	0.0002052387182508	1	7	biological_process
+GO:0045445	myoblast differentiation	0.00031167991435846664	3	4	biological_process
+GO:2000116	regulation of cysteine-type endopeptidase activity	0.0022719026525075334	3	7	biological_process
+GO:0030168	platelet activation	0.00556921282295498	5	3	biological_process
+GO:0007411	axon guidance	0.002128529296857067	3	4	biological_process
+GO:0042063	gliogenesis	0.0002182993639576	1	5	biological_process
+GO:0050890	cognition	0.01068390154390655	4	4	biological_process
+GO:0006264	mitochondrial DNA replication	0.0002493506485187	1	7	biological_process
+GO:0045669	positive regulation of osteoblast differentiation	0.0002518838814896	1	6	biological_process
+GO:0051788	response to misfolded protein	0.0002673504356162	1	4	biological_process
+GO:0007520	myoblast fusion	0.0002693618232576	1	4	biological_process
+GO:0002250	adaptive immune response	0.0042079398989533	6	3	biological_process
+GO:0072678	T cell migration	0.020662696317283517	6	5	biological_process
+GO:0009611	response to wounding	0.0020832432240768	2	3	biological_process
+GO:0019915	lipid storage	0.00032323365507833335	3	3	biological_process
+GO:0051899	membrane depolarization	0.000307833198768	1	4	biological_process
+GO:0006635	fatty acid beta-oxidation	0.0003116775154528	1	6	biological_process
+GO:0006869	lipid transport	0.0003303458637235	1	5	biological_process
+GO:0071772	response to BMP	0.0005948257852162	2	3	biological_process
+GO:0021782	glial cell development	0.0003463403370482	1	4	biological_process
+GO:0022008	neurogenesis	0.009255261098021812	17	4	biological_process
+GO:0016246	RNA interference	0.0053038206885104	2	5	biological_process
+GO:0031424	keratinization	0.0003636237680283	1	2	biological_process
+GO:0042157	lipoprotein metabolic process	0.0003698145154481	1	4	biological_process
+GO:0015914	phospholipid transport	0.0003698145154481	1	6	biological_process
+GO:0034976	response to endoplasmic reticulum stress	0.0003719951768296	1	4	biological_process
+GO:0006397	mRNA processing	0.010010179689546242	17	7	biological_process
+GO:0043588	skin development	0.0004709793554638	1	4	biological_process
+GO:0006413	translational initiation	0.0074442847640949	2	3	biological_process
+GO:0051610	serotonin uptake	0.0005252828445231	1	5	biological_process
+GO:0006820	anion transport	0.0005256223938732	1	5	biological_process
+GO:0030902	hindbrain development	0.0005430616484916	1	3	biological_process
+GO:0006568	tryptophan metabolic process	0.0005541445392772	1	5	biological_process
+GO:0070098	chemokine-mediated signaling pathway	0.0010295976655517666	3	5	biological_process
+GO:0048863	stem cell differentiation	0.0012095233213896	2	4	biological_process
+GO:0043616	keratinocyte proliferation	0.002976888076859333	3	4	biological_process
+GO:0030216	keratinocyte differentiation	0.0006233334406746	1	6	biological_process
+GO:0098930	axonal transport	0.0006233406381557	1	7	biological_process
+GO:0010508	positive regulation of autophagy	0.0006234126066868	1	7	biological_process
+GO:0001666	response to hypoxia	0.00103968551273155	2	3	biological_process
+GO:0070268	cornification	0.0007358117906515	1	4	biological_process
+GO:0048246	macrophage chemotaxis	0.0008011002578681	1	4	biological_process
+GO:2000209	regulation of anoikis	0.008335508416218	2	7	biological_process
+GO:0050892	intestinal absorption	0.0008216677199785	1	4	biological_process
+GO:0008286	insulin receptor signaling pathway	0.0008396129382988	1	6	biological_process
+GO:0000902	cell morphogenesis	0.00136760030526745	2	3	biological_process
+GO:0060707	trophoblast giant cell differentiation	0.0008478411450941	1	4	biological_process
+GO:1903131	mononuclear cell differentiation	0.000890298395824	1	5	biological_process
+GO:0044409	entry into host	0.0009621782616114	1	5	biological_process
+GO:0031648	protein destabilization	0.0009821316588957	1	4	biological_process
+GO:0032456	endocytic recycling	0.0010464818220542	1	4	biological_process
+GO:0034728	nucleosome organization	0.016871949484853568	3	5	biological_process
+GO:0006953	acute-phase response	0.0034479476684512998	2	6	biological_process
+GO:0007032	endosome organization	0.0011082890785544	1	6	biological_process
+GO:0007618	mating	0.0011425075392064	1	3	biological_process
+GO:0002870	T cell anergy	0.0011942239020955	1	4	biological_process
+GO:0070849	response to epidermal growth factor	0.001242503497834	1	3	biological_process
+GO:0030593	neutrophil chemotaxis	0.0055647625920796666	6	5	biological_process
+GO:0044255	cellular lipid metabolic process	0.00203297681413555	2	3	biological_process
+GO:0035239	tube morphogenesis	0.0012864069661792	1	3	biological_process
+GO:0007010	cytoskeleton organization	0.009947388005821444	9	5	biological_process
+GO:0051145	smooth muscle cell differentiation	0.001397513640721	1	5	biological_process
+GO:0070365	hepatocyte differentiation	0.0014352740155436	1	5	biological_process
+GO:0002377	immunoglobulin production	0.0066482935464268755	4	3	biological_process
+GO:0006605	protein targeting	0.0036814515206614	3	5	biological_process
+GO:0015074	DNA integration	0.0014540753393142	1	5	biological_process
+GO:0046960	sensitization	0.008601237404791367	3	5	biological_process
+GO:0072089	stem cell proliferation	0.0062722397094802	2	3	biological_process
+GO:0060070	canonical Wnt signaling pathway	0.006026707688245525	4	6	biological_process
+GO:0010818	T cell chemotaxis	0.0016744863514675	1	5	biological_process
+GO:0009838	abscission	0.0018547362263683	1	2	biological_process
+GO:0002544	chronic inflammatory response	0.0094351807525102	2	5	biological_process
+GO:0030865	cortical cytoskeleton organization	0.0019433541134374	1	6	biological_process
+GO:0070265	necrotic cell death	0.0020766390907869	1	3	biological_process
+GO:0030509	BMP signaling pathway	0.0022948924663003497	2	6	biological_process
+GO:0099536	synaptic signaling	0.0023705071957969	1	3	biological_process
+GO:0007507	heart development	0.0024840604828496	1	4	biological_process
+GO:0043696	dedifferentiation	0.0025114084152848	1	2	biological_process
+GO:0048247	lymphocyte chemotaxis	0.0033538449447217495	2	4	biological_process
+GO:0045058	T cell selection	0.004578547282240501	2	2	biological_process
+GO:0097194	execution phase of apoptosis	0.0029312986708359	1	2	biological_process
+GO:0001570	vasculogenesis	0.0088877374428155	3	4	biological_process
+GO:0008285	negative regulation of cell population proliferation	0.0030659366027272	1	5	biological_process
+GO:0001649	osteoblast differentiation	0.007413085440532066	3	4	biological_process
+GO:0016446	somatic hypermutation of immunoglobulin genes	0.0031395892342174	1	4	biological_process
+GO:0097193	intrinsic apoptotic signaling pathway	0.0034370513883156	1	4	biological_process
+GO:0097300	programmed necrotic cell death	0.0037385539933591	1	4	biological_process
+GO:0045595	regulation of cell differentiation	0.01035418453175425	2	4	biological_process
+GO:0007098	centrosome cycle	0.0037981990296304	1	3	biological_process
+GO:0051882	mitochondrial depolarization	0.0038043162999011	1	5	biological_process
+GO:0031054	pre-miRNA processing	0.0040466750248763	1	8	biological_process
+GO:0045834	positive regulation of lipid metabolic process	0.0040832938720466	1	5	biological_process
+GO:0032869	cellular response to insulin stimulus	0.0040832938720466	1	6	biological_process
+GO:0006886	intracellular protein transport	0.0040892306024538	1	4	biological_process
+GO:0050821	protein stabilization	0.0241254966448424	4	4	biological_process
+GO:0009725	response to hormone	0.0045013504581016	1	3	biological_process
+GO:0022616	DNA strand elongation	0.0045013504581016	1	5	biological_process
+GO:0019985	translesion synthesis	0.0045013504581016	1	7	biological_process
+GO:0009597	detection of virus	0.0264815710885434	2	4	biological_process
+GO:0019068	virion assembly	0.0049034837550948	1	2	biological_process
+GO:0031929	TOR signaling	0.0049232886961061	1	4	biological_process
+GO:0031296	B cell costimulation	0.0050299811778593	1	3	biological_process
+GO:0002227	innate immune response in mucosa	0.0050299811778593	1	5	biological_process
+GO:0002260	lymphocyte homeostasis	0.00820686185250155	2	3	biological_process
+GO:0071456	cellular response to hypoxia	0.0061974547370633	1	4	biological_process
+GO:0019058	viral life cycle	0.025043143326317064	3	2	biological_process
+GO:0061517	macrophage proliferation	0.0062569164444572	1	4	biological_process
+GO:0048771	tissue remodeling	0.0064855984911758	1	2	biological_process
+GO:0097190	apoptotic signaling pathway	0.010130724127676767	3	3	biological_process
+GO:0006094	gluconeogenesis	0.0070696269522389	1	6	biological_process
+GO:0001935	endothelial cell proliferation	0.011320510945486301	2	4	biological_process
+GO:0046755	viral budding	0.0072789277343217	1	2	biological_process
+GO:0002467	germinal center formation	0.015641939072025803	2	3	biological_process
+GO:0034097	response to cytokine	0.014031529170721849	4	4	biological_process
+GO:0034332	adherens junction organization	0.0084199184162441	1	6	biological_process
+GO:0007420	brain development	0.018857931275411948	2	4	biological_process
+GO:0001787	natural killer cell proliferation	0.0091639119833264	1	5	biological_process
+GO:0035282	segmentation	0.02006783233279525	2	4	biological_process
+GO:0001771	immunological synapse formation	0.0101477010274628	1	4	biological_process
+GO:0002314	germinal center B cell differentiation	0.0106913351956872	1	7	biological_process
+GO:0048660	regulation of smooth muscle cell proliferation	0.0108786387919111	1	5	biological_process
+GO:0006473	protein acetylation	0.017878080161296134	3	7	biological_process
+GO:0014889	muscle atrophy	0.0114337290490479	1	3	biological_process
+GO:0032364	oxygen homeostasis	0.0131340898747169	1	6	biological_process
+GO:0002521	leukocyte differentiation	0.0131838209340441	1	4	biological_process
+GO:0042552	myelination	0.0154306165223061	1	4	biological_process
+GO:0032602	chemokine production	0.0164606998926549	1	3	biological_process
+GO:0060290	transdifferentiation	0.0164957906424201	1	4	biological_process
+GO:0001503	ossification	0.0167299245806945	1	2	biological_process
+GO:0019079	viral genome replication	0.0191177382409438	1	2	biological_process
+GO:0009314	response to radiation	0.0275861922218645	2	3	biological_process
+GO:0019221	cytokine-mediated signaling pathway	0.0206198442484461	1	4	biological_process
+GO:0050776	regulation of immune response	0.0239861132986656	1	4	biological_process
+GO:0006323	DNA packaging	0.0301310753103607	1	7	biological_process
+GO:0035973	aggrephagy	0.0301460162756077	1	6	biological_process
+GO:0002062	chondrocyte differentiation	0.0343125569722244	1	4	biological_process
+GO:0010761	fibroblast migration	0.0343125569722244	1	5	biological_process
+GO:0042325	regulation of phosphorylation	0.037837681822601	1	7	biological_process
+GO:0010507	negative regulation of autophagy	0.0404325821946498	1	7	biological_process
+GO:0097028	dendritic cell differentiation	0.04617789879284085	2	6	biological_process
